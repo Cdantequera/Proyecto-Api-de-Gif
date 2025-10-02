@@ -1,6 +1,7 @@
 import React from 'react'
 import './GifList.css'
-import GifCard from '../GifCard/GifCard'
+import GifCard from '../GiftCard/GifCard'
+
 
 function GifList({gifs}) {
 
