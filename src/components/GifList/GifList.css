@@ -1,0 +1,47 @@
+.gif-list {
+  column-count: 4; /* cantidad de columnas en pantallas grandes */
+  column-gap: 1rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+.gif-card {
+  display: inline-block; /* necesario para que respete el flujo de columnas */
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.gif-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.gif-card p {
+  font-size: 0.85rem;
+  color: #ddd;
+  padding: 0.5rem;
+  text-align: center;
+}
+.gif-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+/* Responsivo */
+@media (max-width: 1024px) {
+  .gif-list {
+    column-count: 3;
+  }
+}
+@media (max-width: 768px) {
+  .gif-list {
+    column-count: 2;
+  }
+}
+@media (max-width: 480px) {
+  .gif-list {
+    column-count: 1;
+  }
+}
